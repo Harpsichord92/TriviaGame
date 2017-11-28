@@ -1,0 +1,14 @@
+header {
+	text-align: center;
+	background: #aed600;
+}
+
+label {
+	padding: 10px;
+}
+
+#container {
+	text-align: center;
+	background-color: #aed600;
+	height: 100%;
+}
