@@ -45,10 +45,9 @@ var qA = {
 
 // Function to start game
 
-	//Something to check wrong and right answers and add to counts
+	//End game when timer === 0
 
-// Function to reset game
-
+		//Something to check wrong and right answers and add to counts
 
 // Timer
 //===============================================
