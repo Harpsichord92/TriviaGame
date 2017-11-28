@@ -8,7 +8,7 @@ var qA = {
 
 	1: {
 		question: 'What is the name of the Rugrats spin-off show?',
-		answers: ['Rugrats Go Wild', 'Rugrats', 'Rugrats All Grown Up', 'Rugrats'],
+		answers: ['Rugrats Go Wild', 'Rugrats All Out', 'Rugrats All Grown Up', 'Rugrats Adulted'],
 		correct: 'Rugrats All Grown Up'
 	},
 
@@ -38,19 +38,17 @@ var qA = {
 	
 };
 
-//Timer
+// Game Logic
 //===============================================
-var timerStart = function(){
-	$('#timer').empty();
-	//Sets time to 30
-	trivTime = 300;
-	timer = setInterval(timeDecrement, 100);
-}
 
-var timeDecrement = function(){
-	if(trivTime === -10){
-		userAnswer = false;
-		//Clears Time
-		clearInterval(timer);
-	}
-}
+// Function to only allow one checked box at a time
+
+// Function to start game
+
+	//Something to check wrong and right answers and add to counts
+
+// Function to reset game
+
+
+// Timer
+//===============================================
