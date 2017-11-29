@@ -2,6 +2,7 @@
 //======================================================
 var rightCount = 0;
 var wrongCount = 0;
+var unanswered = 0;
 
 
 // Game Logic
@@ -36,8 +37,10 @@ function endgame() {
         if ($('.firstq:checked').val() === 'r')
         {
             rightCount ++;
-        } 
-        else {
+        }
+
+        else
+        {
         	wrongCount ++;
         }
     });
@@ -48,7 +51,8 @@ function endgame() {
         {
             rightCount ++;
         } 
-        else {
+        else 
+        {
         	wrongCount ++;
         }
     });
@@ -59,7 +63,8 @@ function endgame() {
         {
             rightCount ++;
         } 
-        else {
+        else 
+        {
         	wrongCount ++;
         }
     });
@@ -70,7 +75,8 @@ function endgame() {
         {
             rightCount ++;
         } 
-        else {
+        else 
+        {
         	wrongCount ++;
         }
     });
@@ -81,7 +87,8 @@ function endgame() {
         {
             rightCount ++;
         } 
-        else {
+        else 
+        {
         	wrongCount ++;
         }
     });
@@ -93,7 +100,7 @@ function endgame() {
 window.onload = function(){
   
 (function(){
-  var counter = 30;
+  var counter = 45;
 
   setInterval(function() {
     counter--;
