@@ -1,53 +1,114 @@
 // Global Variables
 //======================================================
-var trivTime = 0;
 var rightCount = 0;
 var wrongCount = 0;
-var timer = '';
-var qA = {
 
-	1: {
-		question: 'What is the name of the Rugrats spin-off show?',
-		answers: ['Rugrats Go Wild', 'Rugrats All Out', 'Rugrats All Grown Up', 'Rugrats Adulted'],
-		correct: 'Rugrats All Grown Up'
-	},
-
-	2: {
-		question: 'Who is Tommy Pickles\' younger brother?',
-		answers: ['Dil', 'Will', 'Phil', 'Dill'],
-		correct: 'Dil'
-	},
-
-	3: {
-		question: 'What fruit\'s seeds did Chuckie eat that the Rugrats thought would grow in his stomache?',
-		answers: ['Orange', 'Watermelon', 'Peach', 'Apple'],
-		correct: 'Watermelon'
-	},
-		
-	4: {
-		question: 'What is the name of the monster that all the kids love?'
-		answers: ['Robosnail', 'Sharknado', 'Godzilla', 'Reptar'],
-		correct: 'Reptar'
-	},
-
-	5: {
-		question: 'How many Rugrats movies were made?'
-		answers: ['2', '3', '4', '5'],
-		correct: '3'
-	}
-	
-};
 
 // Game Logic
 //===============================================
 
-// Function to only allow one checked box at a time
+// Functions to only allow one checked box at a time
+$('.firstq').on('change', function() {
+	$('.firstq').not(this).prop('checked', false);  
+		});
+
+$('.secondq').on('change', function() {
+	$('.secondq').not(this).prop('checked', false);  
+		});
+
+$('.thirdq').on('change', function() {
+	$('.thirdq').not(this).prop('checked', false);  
+		});
+
+$('.fourthq').on('change', function() {
+	$('.fourthq').not(this).prop('checked', false);  
+		});
+
+$('.fifthq').on('change', function() {
+	$('.fifthq').not(this).prop('checked', false);  
+		});
 
 // Function to start game
+function endgame() {
 
-	//End game when timer === 0
+	//First Question
+    $(".firstq:checked").each(function(){  
+        if ($('.firstq:checked').val() === 'r')
+        {
+            rightCount ++;
+        } 
+        else {
+        	wrongCount ++;
+        }
+    });
 
-		//Something to check wrong and right answers and add to counts
+	//Second Question
+    $(".secondq:checked").each(function(){  
+        if ($('.secondq:checked').val() === 'r')
+        {
+            rightCount ++;
+        } 
+        else {
+        	wrongCount ++;
+        }
+    });
+
+	//Third Question
+    $(".thirdq:checked").each(function(){  
+        if ($('.thirdq:checked').val() === 'r')
+        {
+            rightCount ++;
+        } 
+        else {
+        	wrongCount ++;
+        }
+    });
+
+	//Fourth Question
+    $(".fourthq:checked").each(function(){  
+        if ($('.fourthq:checked').val() === 'r')
+        {
+            rightCount ++;
+        } 
+        else {
+        	wrongCount ++;
+        }
+    });
+
+	//Fifth Question
+    $(".fifthq:checked").each(function(){  
+        if ($('.fifthq:checked').val() === 'r')
+        {
+            rightCount ++;
+        } 
+        else {
+        	wrongCount ++;
+        }
+    });
+}
 
 // Timer
 //===============================================
+
+window.onload = function(){
+  
+(function(){
+  var counter = 30;
+
+  setInterval(function() {
+    counter--;
+    if (counter >= 0) {
+      $("#timer").html("Time Remaining: " + counter + " seconds")
+    }
+    // Display 'counter' wherever you want to display it.
+    if (counter === 0) {
+        clearInterval(counter);
+
+        //Alerts user how many questions they got correct/incorrect
+        endgame();
+        alert('You got ' + rightCount + ' questions correct' + ' and ' + wrongCount + ' wrong.');
+    }
+    
+  }, 1000);
+})();
+}
